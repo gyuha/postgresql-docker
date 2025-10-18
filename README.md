@@ -2,7 +2,7 @@
 
 Comprehensive guide for setting up and managing PostgreSQL 17 database server using Docker Compose
 
-> [한국어 문서](./README.ko.md)
+> English | [한국어](./README.ko.md)
 
 ## 📋 Table of Contents
 

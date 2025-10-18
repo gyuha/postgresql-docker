@@ -2,7 +2,7 @@
 
 Docker Compose를 사용한 PostgreSQL 17 데이터베이스 서버 구성 및 운영 가이드
 
-> [English Documentation](./README.md)
+> 한국어 | [English](./README.md)
 
 ## 📋 목차
 
