@@ -1,0 +1,23 @@
+services:
+  postgresql:
+    image: postgres:17
+    container_name: postgresql
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB:-auto_node}
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+      PGDATA: /var/lib/postgresql/data/pgdata
+      TZ: ${TZ:-Asia/Seoul}
+      PGTZ: ${PGTZ:-Asia/Seoul}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - ./postgresql_data:/var/lib/postgresql/data
+    restart: unless-stopped
+    networks:
+      - postgres_network
+
+networks:
+  postgres_network:
+    driver: bridge
